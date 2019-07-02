@@ -1,13 +1,19 @@
 Package: rportr
-Title: What the Package Does (One Line, Title Case)
+Title: Streamline Reproducible Reporting In RMarkdown
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "First",
-           family = "Last",
+    person(given = "Beau",
+           family = "Lucas",
            role = c("aut", "cre"),
-           email = "first.last@example.com",
+           email = "statsbeau@gmail.com",
            comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
-License: What license it uses
+Description: rportr is full of helper functions that tackle the code bloa in reproducible reports. Functions range from data import, data wrangling, and setting up report parameters.
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 6.1.1
+Imports: 
+    magrittr
+Suggests: 
+    testthat
