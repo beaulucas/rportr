@@ -7,7 +7,7 @@
 #'
 #' @examples
 read_directory <- function(directory_path) {
-  file_paths <- list.files(glue::glue("./{directory_path}"), full.names = TRUE)
+  file_paths <- list.files(directory_path, full.names = TRUE)
 
   for (file_path in file_paths) {
     file_format <- tools::file_ext(file_path)
@@ -19,9 +19,9 @@ read_directory <- function(directory_path) {
       tbl <- readr::read_rds(file_path)
     }
     else {
-      warning(glue::glue("{file_path} is invalid file type."))
+      warning(paste0(file_path, " is invalid file type."))
     }
     assign(tibble_name, tbl)
-    message(glue::glue("{file_path} read in as variable: {tibble_name}"))
+    message(paste0(file_path, " read in as variable: ", tibble_name))
   }
 }
