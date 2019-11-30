@@ -7,7 +7,7 @@
 read_directory(directory_path)
 }
 \arguments{
-\item{directory_path}{}
+\item{directory_path}{Absolute path of directory}
 }
 \description{
 Read delimited files and/or rds files from a directory

@@ -31,7 +31,7 @@ Say you have a `./data` directory in your project, full of a mix of text
 files and RDS files. How to read all of them at once and assign them
 descriptive names?
 
-Let’s create a directory to demonstrate it.
+Let’s create a directory to demonstrate it. youtube
 
 ``` r
 dir.create("./data")
@@ -52,13 +52,8 @@ names based on the file name.
 
 ``` r
 library(rportr)
-#> 
-#> Attaching package: 'rportr'
-#> The following object is masked from 'package:datasets':
-#> 
-#>     mtcars
 read_directory("./data")
-#> ./data/iris.rds read in as variable: iris
+#> File ./data/iris.rds assigned to variable: iris
 #> Warning: Missing column names filled in: 'X1' [1]
 #> Parsed with column specification:
 #> cols(
@@ -75,7 +70,7 @@ read_directory("./data")
 #>   gear = col_double(),
 #>   carb = col_double()
 #> )
-#> ./data/mtcars.csv read in as variable: mtcars
+#> File ./data/mtcars.csv assigned to variable: mtcars
 ```
 
 ### Setting up a project directory

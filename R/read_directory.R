@@ -1,11 +1,11 @@
 #' Read delimited files and/or rds files from a directory
 #'
-#' @param directory_path
+#' @param directory_path Absolute path of directory
 #'
 #' @return
 #' @export
 #'
-#' @examples
+#' @examples \dontrun{read_directory()
 read_directory <- function(directory_path) {
   file_paths <- list.files(directory_path, full.names = TRUE)
 
@@ -21,7 +21,7 @@ read_directory <- function(directory_path) {
     else {
       warning(paste0(file_path, " is invalid file type."))
     }
-    assign(tibble_name, tbl)
-    message(paste0(file_path, " read in as variable: ", tibble_name))
+    assign(tibble_name, tbl, envir = globalenv())
+    message(paste0("File ", file_path, " assigned to variable: ", tibble_name))
   }
 }

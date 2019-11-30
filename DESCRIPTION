@@ -1,5 +1,5 @@
 Package: rportr
-Title: Streamline Reproducible Reporting In RMarkdown
+Title: Streamline Reproducible Reporting And Project Workflow In RStudio
 Version: 0.0.0.9000
 Authors@R: 
     person(given = "Beau",
@@ -7,13 +7,13 @@ Authors@R:
            role = c("aut", "cre"),
            email = "statsbeau@gmail.com",
            comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: rportr is full of helper functions that tackle the code bloa in reproducible reports. Functions range from data import, data wrangling, and setting up report parameters.
+Description: rportr is full of helper functions that tackle code bloat in reproducible reports. Functions range from data import, data wrangling, and setting up report parameters.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 6.1.1
 Imports: 
-    magrittr, readr
+    magrittr, readr, fs, tibble
 Suggests: 
     testthat (>= 2.1.0)
